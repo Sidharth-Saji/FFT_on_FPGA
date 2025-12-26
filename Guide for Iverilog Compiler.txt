@@ -1,4 +1,3 @@
-Running: iverilog -o .\dumping_printed_variables.vvp .\Testbench.v
+Running: iverilog -g2012 -o .\dumping_printed_variables.vvp .\testbench.v
 Print Variables: vvp .\dumping_printed_variables.vvp
 See Waveforms: gtkwave.exe dumpfile.vcd
-    

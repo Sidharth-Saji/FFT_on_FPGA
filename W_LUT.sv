@@ -3,7 +3,6 @@ module W_LUT (
   output reg signed [31:0] W
 );
 // Using Q8.8 Format
-  parameter fraction = 8;
   
   
 always @(k)
