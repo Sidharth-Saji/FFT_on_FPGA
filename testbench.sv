@@ -7,7 +7,7 @@
 
 module FFT_Testbench;
 
-  parameter int N = 16;
+  parameter int N = 2;
   parameter int W = 16;
   parameter int fraction = 8;
 
@@ -43,7 +43,7 @@ module FFT_Testbench;
   );
 
   initial begin
-    $dumpfile("dump.vcd");
+    $dumpfile("Outputs/Waveforms.vcd");
     $dumpvars(0, FFT_Testbench);
 
     // Open input file
@@ -62,18 +62,18 @@ module FFT_Testbench;
     end
     $fclose(input_file);
 
-    // Wait for combinational/pipelined settling
-    #20;
+   // Wait for combinational/pipelined settling
+   #200;
 
-    // Display FFT outputs
-    for (i = 0; i < N; i = i + 1) begin
-      $display(
-        "X[%0d] = %f + j%f",
-        i,
-        $signed(X_real[i]) * (1.0 / (1 << fraction)),
-        $signed(X_im[i])   * (1.0 / (1 << fraction))
-      );
-    end
+  // Display FFT outputs
+  for (i = 0; i < N; i = i + 1) begin
+    $display( "X[%0d] = %f + j%f", i,
+      $signed(X_real[i]) * (1.0 / (1 << fraction)),
+      $signed(X_im[i])   * (1.0 / (1 << fraction))
+    );
+  end
+
+    
 
     $finish;
   end
