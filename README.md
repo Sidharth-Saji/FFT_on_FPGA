@@ -8,3 +8,7 @@ Files in Parametrized Version
 - butterfly.sv - 2-point Buttefly
 - ComplexAdd.sv - Complex Addition
 - ComplexMul.sv - Complex Multiplication
+
+Next Work
+- Bit growth analysis and finalising fixed point representation
+- Check with other points of FFT

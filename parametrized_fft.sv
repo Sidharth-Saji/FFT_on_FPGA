@@ -24,7 +24,10 @@ module fft #(
 
   wire signed [31:0] W_LUT [0:TW-1];
 
-  // Example: N = 16 twiddles
+  // N = 2 twiddle factor
+  assign W_LUT = 16'sd1;
+
+  // N = 16 twiddle factors
   assign W_LUT[0] = {16'sd256,   16'sd0};
   assign W_LUT[1] = {16'sd236,  -16'sd98};
   assign W_LUT[2] = {16'sd181, -16'sd181};

@@ -1,5 +1,5 @@
 	
-// Q4.2 Addition
+// Q8.8 Addition
 module ComplexAdd(
   input signed [15:0] A_Real,
   input signed [15:0] B_Real,
@@ -9,7 +9,7 @@ module ComplexAdd(
   output reg signed [15:0] O_Im
 );
   
-// Using Q4.12 Format
+// Using Q8.8 Format
   always @*
   begin
     O_Real <= A_Real + B_Real;
