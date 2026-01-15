@@ -7,7 +7,7 @@
 
 module FFT_Testbench;
 
-  parameter int N = 2;
+  parameter int N = 16;
   parameter int W = 16;
   parameter int fraction = 8;
 

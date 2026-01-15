@@ -25,17 +25,18 @@ module fft #(
   wire signed [31:0] W_LUT [0:TW-1];
 
   // N = 2 twiddle factor
-  assign W_LUT = 16'sd1;
+  // assign W_LUT[0] = 16'sd1;
+
 
   // N = 16 twiddle factors
-  assign W_LUT[0] = {16'sd256,   16'sd0};
-  assign W_LUT[1] = {16'sd236,  -16'sd98};
-  assign W_LUT[2] = {16'sd181, -16'sd181};
-  assign W_LUT[3] = {16'sd98,  -16'sd236};
-  assign W_LUT[4] = {16'sd0,   -16'sd256};
-  assign W_LUT[5] = {-16'sd98, -16'sd236};
-  assign W_LUT[6] = {-16'sd181,-16'sd181};
-  assign W_LUT[7] = {-16'sd236,-16'sd98};
+  assign W_LUT[0] = {16'sd32767,   16'sd0};
+  assign W_LUT[1] = {16'sd30274,  -16'sd12540};
+  assign W_LUT[2] = {16'sd23170, -16'sd23170};
+  assign W_LUT[3] = {16'sd12540,  -16'sd30274};
+  assign W_LUT[4] = {16'sd0,   -16'sd32768};
+  assign W_LUT[5] = {-16'sd12540, -16'sd30274};
+  assign W_LUT[6] = {-16'sd23170,-16'sd23170};
+  assign W_LUT[7] = {-16'sd30274,-16'sd12540};
 
   // ------------------------------------------------------------
   // Generate FFT structure

@@ -7,7 +7,8 @@ module ComplexMul(
   output reg signed [15:0] O_Im
 );
   
-  parameter fraction = 8;
+  
+  parameter fraction = 15;
   
   // Using Q8.8 Format to store multiplied output
   wire [31:0] temp_r_r;
